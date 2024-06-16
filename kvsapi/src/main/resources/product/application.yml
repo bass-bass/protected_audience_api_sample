@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: product
+---
+spring:
+  profiles: product
+  other:
+    hoge: 12345

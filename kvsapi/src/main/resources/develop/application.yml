@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: develop
+---
+spring:
+  profiles: develop
+  other:
+    hoge: 123

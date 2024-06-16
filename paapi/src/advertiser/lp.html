@@ -1,0 +1,24 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>This is advertiser's landing page.</h1>
+    <a id="a78601f2445b3f73" onclick="addBeaconData(this)" href="https://localhost:44301/advertiser/thanks.html" target="_blank">cv</a>
+
+    <script>
+        function addBeaconData(element) {
+            console.log("addBeaconData() is called. element.id: " + element.id);
+            let beacon_event = {
+                eventType: "reserved.top_navigation_commit",
+                eventData: element.id, // cvTagId
+                destination: ["buyer"],
+                crossOriginExposed: true,
+            }
+            window.fence.setReportEventDataForAutomaticBeacons(beacon_event);
+        }
+    </script>
+</body>
+
+</html>
