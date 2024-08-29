@@ -4,7 +4,9 @@ WORKDIR /certification
 
 COPY nginx.repo /etc/yum.repos.d/
 
-RUN yum -y update && yum clean all && \
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
+    sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* && \
+    yum -y update && yum clean all && \
     # install nodejs, nginx
     yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y && \
     yum -y install sudo nodejs lsof nsolid nginx java-11-openjdk && \
