@@ -5,9 +5,6 @@
 3. 広告配信
 4. レポーティング(reportWin, reportEvent)
 
-## utils
-- lint : `npm run lint:code`
-
 ## setup
 1. 次のオプションつけてchromeの再起動（attestetion checkの無効化）`--disable-features=EnforcePrivacySandboxAttestations`
     * e.g. `open -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --disable-features=EnforcePrivacySandboxAttestations` (MacOS)
@@ -44,7 +41,3 @@
 - Publisher : `localhost:44302` -> `localhost:8080`
 - DSP : `localhost:44303` -> `localhost:8081`
 - SSP : `localhost:44304` -> `localhost:8080`
-
-### refs
-* `Automatic publicPath is not supported in this browser` -> https://stackoverflow.com/questions/64294706/webpack5-automatic-publicpath-is-not-supported-in-this-browser
-* iframe vs fencedframe -> https://developers.google.com/privacy-sandbox/relevance/fenced-frame?hl=ja 
